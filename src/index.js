@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BrowserRouter as Router, Route, NavLink,Switch,Redirect } from 'react-router-dom';
+import {BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import {Home} from  './components/tabs/Home';
 import {Admin} from  './components/tabs/Admin';
 import {Profile} from  './components/tabs/Profile';

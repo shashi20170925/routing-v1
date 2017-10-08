@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink } from 'react-router-dom';
 
 export class Item extends React.Component{
   constructor(props) {
@@ -7,18 +8,18 @@ export class Item extends React.Component{
   imageBaseUrl = "http://image.tmdb.org/t/p/w185/";
 
 render(){
-  {console.log(" in the item " , this.props)}
 
   return(
         <li>
-              <a href="#">
 
                    <img src={this.imageBaseUrl + this.props.item.poster_path} alt="Product image description"/>
-              </a>
+
               <div>
-                  <h2><a href="#">{this.props.item.title}</a></h2>
+                  <h2>{this.props.item.title}</h2>
                   <p>{this.props.item.overview}</p>
-                  <a href="#" className="read-more">Read more &rarr;</a>
+                   {/* <Link to={`/products/${this.props.item.id}`}> */}
+                  <NavLink exact to={`/home/item/${this.props.item.id}`}>Read more &rarr;</NavLink>
+
               </div>
           </li>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {ItemList} from '../ItemListing/ItemList'
 import {Item} from '../ItemListing/Item'
 
-import {BrowserRouter as Router, Route, NavLink,Switch,Redirect } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import { searchMovies_v3, getPopularMovies_v3, getPopularTV_v3 } from '../../../src/API/ApIUtil'
 
 
@@ -41,12 +41,17 @@ render(){
            <div>
            <h1>Home component</h1>
        <Switch>
+         <Route path='/home/item/:id' render={(props) =>{console.log("in the ind component", props.match.params.id); return  (  <Item item={this.state.responseData.results.filter((result)=>{ console.log("in the filter", result);if(result.id==props.match.params.id) {return result}})[0]} key={1}  />) }} />
+
            <Route path="/home/itemlist"
            render={(props) => (<ItemList displayItems={this.state.responseData.results}  />) }
 
            />
-           <Route path="/home/item/:id" render={(props) =>{console.log("in the ind component", props.match.params.id); return  (  <Item item={this.state.responseData.results.filter((result)=>{ console.log("in the filter", result);if(result.id==props.match.params.id) {return result}})[0]} key={1}  />) }} />
+           <Route
+           render={(props) => (<ItemList displayItems={this.state.responseData.results}  />) }
+/>
        </Switch>
+
        {/* <Route path="/products/:id" component={App} /> */}
 
            </div>

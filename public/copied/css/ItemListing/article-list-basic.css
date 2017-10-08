@@ -67,6 +67,13 @@
 }
 
 /* Read more */
+.liSelected{
+    color: #FF4000!important;
+
+  text-decoration: underline;
+  font-weight:bolder;
+}
+
 
 .article-list-basic li a.read-more{
     background-color: #87bcd7;

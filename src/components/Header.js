@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink } from 'react-router-dom';
 
 export class Header extends React.Component {
   constructor(props) {
@@ -20,9 +21,9 @@ export class Header extends React.Component {
                         </div>
                         <div id="navbarCollapse" className="collapse navbar-collapse">
                             <ul className="nav navbar-nav">
-                                <li className="active"><a href="">Home</a></li>
-                                <li><a href="">Profile</a></li>
-                                  <li><a href="">Admin</a></li>
+                                <li><NavLink exact activeClassName="liSelected" to={"/home"}>Home</NavLink></li>
+                                  <li><NavLink exact activeClassName="liSelected" to={"/profile"}>Profile</NavLink></li>
+                                    <li><NavLink exact activeClassName="liSelected" to={"/admin"}>Admin</NavLink></li>
                             </ul>
                             <form className="navbar-form navbar-left">
                               <div className="input-group">

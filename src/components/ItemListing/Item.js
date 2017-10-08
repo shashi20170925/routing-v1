@@ -7,7 +7,7 @@ export class Item extends React.Component{
   imageBaseUrl = "http://image.tmdb.org/t/p/w185/";
 
 render(){
-  {console.log(" in the item " , this.props.item)}
+  {console.log(" in the item " , this.props)}
 
   return(
         <li>

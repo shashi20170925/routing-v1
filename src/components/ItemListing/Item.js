@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 export class Item extends React.Component{
   constructor(props) {
@@ -18,7 +18,7 @@ render(){
                   <h2>{this.props.item.title}</h2>
                   <p>{this.props.item.overview}</p>
                    {/* <Link to={`/products/${this.props.item.id}`}> */}
-                  <NavLink exact to={`/home/item/${this.props.item.id}`}>Read more &rarr;</NavLink>
+                  <Link exact to={`/home/item/${this.props.item.id}`}>Read more &rarr;</Link>
 
               </div>
           </li>
